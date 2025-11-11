@@ -8,5 +8,41 @@
     <groupId>com.lingdol</groupId>
     <artifactId>lingdol-common</artifactId>
     <name>lingdol-common</name>
+    <version>0.0.1-SNAPSHOT</version>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.1</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <distributionManagement>
+        <repository>
+            <id>dev-release</id>
+            <name>Nexus Release Repository</name>
+            <url>http://my.office.hupun.com:7481/nexus/content/repositories/releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>dev-snapshot</id>
+            <name>Nexus Snapshot Repository</name>
+            <url>http://my.office.hupun.com:7481/nexus/content/repositories/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
